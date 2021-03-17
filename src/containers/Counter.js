@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actionType from '../store/actions';
-import CounterLabel from '../components/CounterLabel/CounterLabel';
-import CounterButton from '../components/CounterButton/CounterButton';
+import CounterLabel from
+    '../components/CounterLabel/CounterLabel';
+import CounterButton from
+    '../components/CounterButton/CounterButton';
 
 import './Counter.css';
 
@@ -11,8 +13,12 @@ class Counter extends Component {
         return (
             <div className="Counter">
                 <CounterLabel value={this.props.ctr} />
-                <CounterButton clicked={this.props.onAdd} label="Add" />
-                <CounterButton clicked={this.props.onSubtract} label="Subtract" />
+                <CounterButton
+                    clicked={this.props.onAdd}
+                    label="Add" />
+                <CounterButton
+                    clicked={this.props.onSubtract}
+                    label="Subtract" />
             </div>
         )
     }
@@ -32,4 +38,7 @@ const mapDispatchToProps = dispatch => {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Counter);

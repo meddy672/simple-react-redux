@@ -4,7 +4,12 @@ import './CounterButton.css';
 function CounterButton(props) {
     return (
         <div className="CounterButton">
-            <button type="button" onClick={props.clicked} className="btn btn-primary">{ props.label}</button>
+            <button
+                type="button"
+                onClick={props.clicked}
+                className="btn btn-primary">
+                {props.label}
+            </button>
         </div>
     )
 }
